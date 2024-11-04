@@ -33,12 +33,28 @@ Animation System
 
 
 Genişletilebilir Yapı  
---Proje özellikle aşağıdaki alanlarda genişlemeye uygun tasarlandı:
+-Proje özellikle aşağıdaki alanlarda genişlemeye uygun tasarlandı:
  
--PowerUp Sistemi için: - Yeni güç tipleri kolayca eklenebilir - Mevcut güçler özelleştirilebilir - Farklı efekt ve davranışlar tanımlanabilir 
--Cube Sistemi için: - Yeni küp tipleri eklenebilir - Farklı davranış ve özellikler tanımlanabilir - Çeşitli engel tipleri oluşturulabilir 
--Grid Sistemi için: - Farklı grid şekilleri - Çeşitli level yapıları - Özel oyun kuralları 
--Level Editor - Özel level tasarım aracı - Sürükle-bırak engel yerleştirme - Grid boyutu ve oyun parametreleri ayarlama - Level test etme imkanı 
+PowerUp Sistemi için 
+- Yeni güç tipleri kolayca eklenebilir 
+- Mevcut güçler özelleştirilebilir 
+- Farklı efekt ve davranışlar tanımlanabilir
+ 
+Cube Sistemi için 
+- Yeni küp tipleri eklenebilir 
+- Farklı davranış ve özellikler tanımlanabilir 
+- Çeşitli engel tipleri oluşturulabilir
+ 
+Grid Sistemi için
+- Farklı grid şekilleri 
+- Çeşitli level yapıları 
+- Özel oyun kuralları
+ 
+Level Editor 
+- Özel level tasarım aracı 
+- Sürükle-bırak engel yerleştirme 
+- Grid boyutu ve oyun parametreleri ayarlama 
+- Level test etme imkanı 
 => Scriptable Objects => Level1Data  bunu türetip GameControllerdeki level dataya atayabilirsiniz.
   
 Optimizasyon 

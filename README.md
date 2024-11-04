@@ -52,7 +52,6 @@ Grid Sistemi için
  
 Level Editor 
 - Özel level tasarım aracı 
-- Sürükle-bırak engel yerleştirme 
 - Grid boyutu ve oyun parametreleri ayarlama 
 - Level test etme imkanı 
 => Scriptable Objects => Level1Data  bunu türetip GameControllerdeki level dataya atayabilirsiniz.

@@ -1,7 +1,7 @@
-// LevelEditorUI.cs
 using UnityEngine;
 using UnityEditor;
 using Match2.Core.Data;
+
 
 public class LevelEditorUI
 {

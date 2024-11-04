@@ -1,8 +1,8 @@
-// LevelEditorGrid.cs
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using Match2.Core.Data;
+
 
 public class LevelEditorGrid
 {
@@ -22,6 +22,7 @@ public class LevelEditorGrid
         currentLevel = level;
     }
 
+
     public void Draw(Dictionary<Vector2Int, ObstacleData> obstaclePositions)
     {
         if (currentLevel == null) return;
@@ -32,7 +33,6 @@ public class LevelEditorGrid
         gridRect = GUILayoutUtility.GetRect(totalWidth, totalHeight);
         EditorGUI.DrawRect(gridRect, settings.gridBackgroundColor);
 
-        // Y eksenini ters çevirerek çizim yapıyoruz
         for (int x = 0; x < currentLevel.width; x++)
         {
             for (int y = currentLevel.height - 1; y >= 0; y--)
@@ -41,7 +41,6 @@ public class LevelEditorGrid
             }
         }
     }
-
 
 
     private float CalculateTotalGridWidth()
@@ -61,21 +60,17 @@ public class LevelEditorGrid
         Vector2Int pos = new Vector2Int(x, y);
         Rect cellRect = GetCellRect(x, y);
 
-        // Hücre içeriğini çiz
         EditorGUI.DrawRect(cellRect, settings.cellBackgroundColor);
 
-        // Dead cell veya obstacle kontrolü
         if (currentLevel.deadCells.Contains(pos))
         {
             EditorGUI.DrawRect(cellRect, settings.deadCellColor);
-            // Visual debug için çerçeve çiz
             DrawDebugFrame(cellRect, Color.red);
         }
         else if (obstaclePositions.TryGetValue(pos, out ObstacleData obstacle))
         {
             EditorGUI.DrawRect(cellRect, settings.obstacleCellColor);
             DrawObstacleHealth(cellRect, obstacle.health);
-            // Visual debug için çerçeve çiz
             DrawDebugFrame(cellRect, Color.yellow);
         }
 
@@ -123,7 +118,6 @@ public class LevelEditorGrid
         float startX = gridRect.x + currentLevel.cellSpacing;
         float startY = gridRect.y + currentLevel.cellSpacing;
 
-        // Y pozisyonunu ters çevir
         int invertedY = (currentLevel.height - 1) - y;
 
         float xPos = startX + (x * (currentLevel.cellSize + currentLevel.cellSpacing));
@@ -134,14 +128,12 @@ public class LevelEditorGrid
 
     public Vector2Int GetGridPosition(Vector2 mousePosition)
     {
-        // Mouse pozisyonunu grid'e göre ayarla
         Vector2 relativePos = mousePosition - gridRect.position -
                              new Vector2(currentLevel.cellSpacing, currentLevel.cellSpacing);
 
         int x = Mathf.FloorToInt(relativePos.x / (currentLevel.cellSize + currentLevel.cellSpacing));
         int y = Mathf.FloorToInt(relativePos.y / (currentLevel.cellSize + currentLevel.cellSpacing));
 
-        // Mouse pozisyonunu grid koordinatlarına çevir
         y = currentLevel.height - 1 - y;
 
         x = Mathf.Clamp(x, 0, currentLevel.width - 1);

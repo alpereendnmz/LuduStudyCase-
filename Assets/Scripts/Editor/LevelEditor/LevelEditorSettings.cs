@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class LevelEditorSettings
 {
     public float cellSize = 40f;

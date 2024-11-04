@@ -1,8 +1,8 @@
-// LevelEditorInputHandler.cs
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using Match2.Core.Data;
+
 
 public class LevelEditorInputHandler
 {

@@ -3,25 +3,35 @@ Proje Hakkında
 Selamlar! Projeyi geliştirirken modern yazılım prensiplerini kullanmaya ve genişletilebilir bir 
 mimari oluşturmaya özen gösterdim. SOLID prensiplerine uygun ve sürdürülebilir bir kod tabanı oluşturmayı hedefledim.
 
-Teknik Detaylar 
-Ana Sistemler 
+Teknik Detaylar
+
+Ana Sistemler
+ 
 GameController ve State Management 
 - Oyunun ana akışını yöneten sistem
 - Modüler yapısı sayesinde yeni oyun modlarının eklenmesine uygun
-- Event-based iletişim sistemi 
+- Event-based iletişim sistemi
+
+ 
 Grid System
 - Esnek grid yapısı
 - Farklı boyut ve şekillerde level tasarımı
 - Ölü hücre ve Obstacle konumlandırma.
-- Object pooling ile optimize edilmiş cube yönetimi 
+- Object pooling ile optimize edilmiş cube yönetimi
+
+ 
 PowerUp System
 - Interface tabanlı modüler yapı
 - Horizontal Rocket, Vertical Rocket ve Bomb powerup'ları
 - Yeni güç tipleri için genişletilebilir altyapı
+
+  
 Animation System 
 - DOTween ile entegre edilmiş animasyon sistemi
 - Modüler ve genişletilebilir yapı
-- Performans odaklı animasyon yönetimi 
+- Performans odaklı animasyon yönetimi
+
+
 Genişletilebilir Yapı 
 Proje özellikle aşağıdaki alanlarda genişlemeye uygun tasarlandı: 
 PowerUp Sistemi için: - Yeni güç tipleri kolayca eklenebilir - Mevcut güçler özelleştirilebilir - Farklı efekt ve davranışlar tanımlanabilir 
